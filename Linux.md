@@ -16,3 +16,16 @@ cat /etc/lsb-release
 lsb-release -a
 ```
 
+## Packages
+
+``` shell
+## for Ubuntu
+# install oh-my-zsh
+apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+apt install autojump
+git clone https://github.com/zsh-users/zsh-autosuggestions ./$ZSH/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ./$ZSH/custom/plugins/
+git clone https://github.com/Powerlevel9k/powerlevel9k ./$ZSH/custom/themes/
+```
+

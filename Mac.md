@@ -1,6 +1,7 @@
-``` shell
-# Set Launchpad dispaly icon number
+## MacSettings
 
+``` shell
+## Set Launchpad dispaly icon number
 # Set rows
 defaults write com.apple.dock springboard-rows -int 7
 # Set columns
@@ -9,15 +10,32 @@ defaults write com.apple.dock springboard-columns -int 8
 defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 ```
 
+
+
+## Commands
+
+``` shell
+## to check cpuinfo of mac
+# this command show the vendor, model and freq of cpu
+sysctl -n machdep.cpu.brand_string	
+# this show the number of Processors of cpu
+system_profiler | grep processor
+```
+
+
+
+## Folders
+
 ``` shell
 # To show volume in dock
-cd /Volume	# in Finder
+# in Finder <Control+shift+G>, then input
+/Volume	
 # then drag folder icon to dock
 ```
 
 
 
-## necessary package
+## Packages
 
 ``` shell
 # util-linux is located in 
