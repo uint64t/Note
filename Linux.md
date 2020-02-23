@@ -29,3 +29,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ./$ZSH/custom
 git clone https://github.com/Powerlevel9k/powerlevel9k ./$ZSH/custom/themes/
 ```
 
+## Command 
+
+``` shell
+# copy public key to server
+cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >> ~/.ssh/authorized_keys"
+```
+
