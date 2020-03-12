@@ -34,5 +34,9 @@ git clone https://github.com/Powerlevel9k/powerlevel9k ./$ZSH/custom/themes/
 ``` shell
 # copy public key to server
 cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >> ~/.ssh/authorized_keys"
+
+# kill all processes that occupy VRAM but idle
+ps -aux | grep <script_name> | grep -v grep | awk '{print $2}' | xargs kill
+
 ```
 

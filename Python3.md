@@ -29,3 +29,14 @@ TypeError:
 dir([object])
 ```
 
+
+
+## PyPackage
+
+``` python
+# tempfile can be used to generate a file in /tmp
+import tempfile
+temp_file = tempfile.NamedTemporaryFile()
+temp_file.name
+```
+
