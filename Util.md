@@ -2,6 +2,8 @@
 
 # Git
 
+## About global settings
+
 ``` shell
 # set global ignore rules
 git config --global core.excludesfile <ignore_file>
@@ -11,5 +13,12 @@ git config --global user.email <email>
 git config --global user.password <password>
 # set git push without passwd
 git config --global credential.helper store
+```
+
+## About tricks
+
+``` shell
+# remove file that had been added by git add
+git rm -r --cached <path>
 ```
 
