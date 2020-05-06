@@ -36,6 +36,9 @@ apt install autojump
 git clone https://github.com/zsh-users/zsh-autosuggestions ./$ZSH/custom/plugins/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ./$ZSH/custom/plugins/
 git clone https://github.com/Powerlevel9k/powerlevel9k ./$ZSH/custom/themes/
+
+# install p7zip, used for 7z file
+sudo apt install p7zip-full p7zip-rar
 ```
 
 ## Command 
