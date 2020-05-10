@@ -23,6 +23,13 @@ cat /etc/lsb-release
 lsb-release -a
 ```
 
+### Check Hardware Status
+
+``` shell
+# Check CPU info
+lscpu	
+```
+
 
 
 ## Packages
@@ -39,16 +46,41 @@ git clone https://github.com/Powerlevel9k/powerlevel9k ./$ZSH/custom/themes/
 
 # install p7zip, used for 7z file
 sudo apt install p7zip-full p7zip-rar
+
+# Display images in the command line
+sudo apt-get install catimg
 ```
+
+Package **catimg** rendering:
+
+![image-20200510142642030](https://tva1.sinaimg.cn/large/007S8ZIlgy1genc6itgx6j31dp0u01hv.jpg)
 
 ## Command 
 
 ``` shell
-# copy public key to server
+## copy public key to server
 cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >> ~/.ssh/authorized_keys"
 
-# kill all processes that occupy VRAM but idle
+## kill all processes that occupy VRAM but idle
 ps -aux | grep <script_name> | grep -v grep | awk '{print $2}' | xargs kill
+
+## Extend Primary partition, fdisk version
+# Note: If there's an error <GPT PMBR size mismatch > when using <fdisk -l>, then you should first to correct GPT table and GPT PMBR
+sudo parted -l
+# or
+sudo parted /dev/sda unit s print
+# or 
+sudo gdisk -l /dev/sda
+
+# delete old partition, and create a new one 
+fdisk <device name>
+>>> d	# delete the old one
+>>> n # create a new one
+>>> w
+
+# resize filesystem 
+resize2fs <device name>
+
 
 ```
 
