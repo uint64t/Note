@@ -26,6 +26,8 @@ TypeError:
 
 ## PyMethod
 
+**Note**: Reflection in python
+
 ``` python
 # check all attribute of object
 dir([object])
