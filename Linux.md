@@ -58,13 +58,55 @@ Package **catimg** rendering:
 ## Command 
 
 ``` shell
+## Multiline comment
+# Note: This type of redirection instructs the shell to read input from the current 
+# source until a line containing only word (with no trailing blanks) is seen.
+:<<word
+	"Content be commented"
+word
+
+## Extract substring
+# Delete all characters before the last '/' searched from the left to right of 'var', 
+# and return the right content of the last '/'(excluded the '/')
+${var##*/}
+# Delete all characters after the last of '/' searched from the right to left of 'var',
+# and return the left content of the last '/'(excluded the '/')
+${var%%/*}
+# Function table
+# | Function | searched direction    | the first one | the last one |
+# | Search   | From left to right    | # 						 | ## 					|
+# | Search   | From right to left    | % 						 | %%						|
+# | Delete   | in the left of #, ##  |							 |							|
+# | Delete   | in the right of %, %% |							 |							|
+
 ## copy public key to server
 cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >> ~/.ssh/authorized_keys"
 
 ## kill all processes that occupy VRAM but idle
 ps -aux | grep <script_name> | grep -v grep | awk '{print $2}' | xargs kill
 
-## Extend Primary partition, fdisk version
+## Get full path of a file 
+echo $(cd $(dirname "$1") && pwd -P)/$(basename "$1")
+
+## Iterate over a list of files with spaces
+find . -iname "foo*" | while read f
+do
+    # ... loop body
+done
+
+```
+
+**Link**: 
+
+1. Multiline comment: https://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash
+2. Extract substring: https://blog.csdn.net/ljianhui/java/article/details/43128465
+3. Get full path of a file: https://stackoverflow.com/questions/5265702/how-to-get-full-path-of-a-file
+4. Iterate over a list of files with spaces: https://stackoverflow.com/questions/7039130/iterate-over-a-list-of-files-with-spaces
+5. 
+
+### Extend Primary partition, using fdisk
+
+```shell
 # Note: If there's an error <GPT PMBR size mismatch > when using <fdisk -l>, then you should first to correct GPT table and GPT PMBR
 sudo parted -l
 # or
@@ -80,7 +122,5 @@ fdisk <device name>
 
 # resize filesystem 
 resize2fs <device name>
-
-
 ```
 
