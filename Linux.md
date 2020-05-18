@@ -48,7 +48,7 @@ git clone https://github.com/Powerlevel9k/powerlevel9k ./$ZSH/custom/themes/
 sudo apt install p7zip-full p7zip-rar
 
 # Display images in the command line
-sudo apt-get install catimg
+sudo apt-get install catimg		
 ```
 
 Package **catimg** rendering:
@@ -85,15 +85,13 @@ cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >>
 ## kill all processes that occupy VRAM but idle
 ps -aux | grep <script_name> | grep -v grep | awk '{print $2}' | xargs kill
 
-## Get full path of a file 
-echo $(cd $(dirname "$1") && pwd -P)/$(basename "$1")
-
-## Iterate over a list of files with spaces
-find . -iname "foo*" | while read f
-do
-    # ... loop body
-done
-
+## Modify time zone
+# Use date to check time zone
+date -R
+# modify time zone
+tzselect
+# for Asia Shanghai only, others will different
+cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 ```
 
 **Link**: 
@@ -122,5 +120,20 @@ fdisk <device name>
 
 # resize filesystem 
 resize2fs <device name>
+```
+
+## Shell Script
+
+### Tricks
+
+```shell
+## Get full path of a file 
+echo $(cd $(dirname "$1") && pwd -P)/$(basename "$1")
+
+## Iterate over a list of files with spaces
+find . -iname "foo*" | while read f
+do
+    # ... loop body
+done
 ```
 

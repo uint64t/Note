@@ -22,3 +22,12 @@ git config --global credential.helper store
 git rm -r --cached <path>
 ```
 
+# Tmux
+
+## tmux command
+
+```shell
+# tmux source file
+tmux source-file ~/.tmux.conf
+```
+
