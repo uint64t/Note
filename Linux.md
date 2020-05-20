@@ -39,10 +39,10 @@ lscpu
 # install oh-my-zsh
 apt install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-apt install autojump
-git clone https://github.com/zsh-users/zsh-autosuggestions ./$ZSH/custom/plugins/
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ./$ZSH/custom/plugins/
-git clone https://github.com/Powerlevel9k/powerlevel9k ./$ZSH/custom/themes/
+sudo apt install autojump
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/Powerlevel9k/powerlevel9k $ZSH/custom/themes/powerlevel9k
 
 # install p7zip, used for 7z file
 sudo apt install p7zip-full p7zip-rar

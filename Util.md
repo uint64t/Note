@@ -20,6 +20,8 @@ git config --global credential.helper store
 ``` shell
 # remove file that had been added by git add
 git rm -r --cached <path>
+# remove commit history 
+git reset --hard HEAD~1
 ```
 
 # Tmux
