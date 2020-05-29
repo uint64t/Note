@@ -49,6 +49,9 @@ sudo apt install p7zip-full p7zip-rar
 
 # Display images in the command line
 sudo apt-get install catimg		
+
+# To mount exfat disk, you should first install exfat-uils
+sudo apt-get install exfat-utils
 ```
 
 Package **catimg** rendering:

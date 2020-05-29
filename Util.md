@@ -13,6 +13,10 @@ git config --global user.email <email>
 git config --global user.password <password>
 # set git push without passwd
 git config --global credential.helper store
+# set proxy
+git config --global http.proxy serverAddr:Port
+# show global config
+git config --global --list
 ```
 
 ## About tricks
