@@ -43,7 +43,9 @@ sudo apt install autojump
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/Powerlevel9k/powerlevel9k $ZSH/custom/themes/powerlevel9k
+```
 
+``` shell
 # install p7zip, used for 7z file
 sudo apt install p7zip-full p7zip-rar
 
@@ -68,6 +70,14 @@ Package **catimg** rendering:
 	"Content be commented"
 word
 
+## copy public key to server
+cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >> ~/.ssh/authorized_keys"
+
+## kill all processes that occupy VRAM but idle
+ps -aux | grep <script_name> | grep -v grep | awk '{print $2}' | xargs kill
+```
+
+``` shell
 ## Extract substring
 # Delete all characters before the last '/' searched from the left to right of 'var', 
 # and return the right content of the last '/'(excluded the '/')
@@ -81,13 +91,9 @@ ${var%%/*}
 # | Search   | From right to left    | % 						 | %%						|
 # | Delete   | in the left of #, ##  |							 |							|
 # | Delete   | in the right of %, %% |							 |							|
+```
 
-## copy public key to server
-cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >> ~/.ssh/authorized_keys"
-
-## kill all processes that occupy VRAM but idle
-ps -aux | grep <script_name> | grep -v grep | awk '{print $2}' | xargs kill
-
+``` shell
 ## Modify time zone
 # Use date to check time zone
 date -R
@@ -99,10 +105,10 @@ cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 
 **Link**: 
 
-1. Multiline comment: https://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash
-2. Extract substring: https://blog.csdn.net/ljianhui/java/article/details/43128465
-3. Get full path of a file: https://stackoverflow.com/questions/5265702/how-to-get-full-path-of-a-file
-4. Iterate over a list of files with spaces: https://stackoverflow.com/questions/7039130/iterate-over-a-list-of-files-with-spaces
+1. [Multiline comment](https://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash)
+2. [Extract substring](https://blog.csdn.net/ljianhui/java/article/details/43128465)
+3. [Get full path of a file](https://stackoverflow.com/questions/5265702/how-to-get-full-path-of-a-file)
+4. [Iterate over a list of files with spaces](https://stackoverflow.com/questions/7039130/iterate-over-a-list-of-files-with-spaces)
 5. 
 
 ### Extend Primary partition, using fdisk
@@ -129,10 +135,12 @@ resize2fs <device name>
 
 ### Tricks
 
-```shell
+``` shell
 ## Get full path of a file 
 echo $(cd $(dirname "$1") && pwd -P)/$(basename "$1")
+```
 
+```shell
 ## Iterate over a list of files with spaces
 find . -iname "foo*" | while read f
 do
@@ -140,3 +148,12 @@ do
 done
 ```
 
+``` shell
+## use 'scale' in bc
+# Note that scale only work with division, see reference_1
+echo $(bc <<< "some_expression")
+```
+
+**Reference**:
+
+1.  [bc: set number of digits after decimal point](https://askubuntu.com/questions/217570/bc-set-number-of-digits-after-decimal-point)
