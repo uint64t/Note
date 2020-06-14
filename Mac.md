@@ -20,6 +20,9 @@ defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 sysctl -n machdep.cpu.brand_string	
 # this show the number of Processors of cpu
 system_profiler | grep processor
+
+## Disable I/O priority constraints
+sudo sysctl debug.lowpri_throttle_enabled=0
 ```
 
 

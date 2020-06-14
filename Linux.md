@@ -75,6 +75,9 @@ cat <key_path> | ssh -p 8530 [-i <exist_key_path>] username@ip_or_domain "cat >>
 
 ## kill all processes that occupy VRAM but idle
 ps -aux | grep <script_name> | grep -v grep | awk '{print $2}' | xargs kill
+
+## In Ubuntu, you can use nautilus to open folder
+nautilus <path>
 ```
 
 ``` shell
@@ -93,8 +96,9 @@ ${var%%/*}
 # | Delete   | in the right of %, %% |							 |							|
 ```
 
+### Modify time zone
+
 ``` shell
-## Modify time zone
 # Use date to check time zone
 date -R
 # modify time zone
