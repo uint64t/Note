@@ -23,6 +23,18 @@ system_profiler | grep processor
 
 ## Disable I/O priority constraints
 sudo sysctl debug.lowpri_throttle_enabled=0
+
+## Show hiden file 
+defaults write com.apple.finder AppleShowAllFiles -bool true
+```
+
+### Mark
+
+p.s: This section is used to record tips from blog etc. The function of these tips are not verified.
+
+```shell
+# When you can't open app with info "This app has been damaged" in macOS Catalina, you can try:
+sudo xattr -d com.apple.quarantine </Path/To/App.app>
 ```
 
 
