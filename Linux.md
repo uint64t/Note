@@ -112,7 +112,7 @@ cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 1. [Multiline comment](https://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash)
 2. [Extract substring](https://blog.csdn.net/ljianhui/java/article/details/43128465)
 3. [Get full path of a file](https://stackoverflow.com/questions/5265702/how-to-get-full-path-of-a-file)
-4. [Iterate over a list of files with spaces](https://stackoverflow.com/questions/7039130/iterate-over-a-list-of-files-with-spaces)
+4. 
 5. 
 
 ### Extend Primary partition, using fdisk
@@ -161,3 +161,4 @@ echo $(bc <<< "some_expression")
 **Reference**:
 
 1.  [bc: set number of digits after decimal point](https://askubuntu.com/questions/217570/bc-set-number-of-digits-after-decimal-point)
+2.  [Iterate over a list of files with spaces](https://stackoverflow.com/questions/7039130/iterate-over-a-list-of-files-with-spaces)
