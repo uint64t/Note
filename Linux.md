@@ -26,8 +26,14 @@ lsb-release -a
 ### Check Hardware Status
 
 ``` shell
+## Package: sysbench
 # Check CPU info
 lscpu	
+
+# Check ram speed 
+sysbench --test=memory --memory-block-size=1M --memory-total-size=10G run
+# Check disk speed 
+hdparm -Tt <device>
 ```
 
 
@@ -162,3 +168,23 @@ echo $(bc <<< "some_expression")
 
 1.  [bc: set number of digits after decimal point](https://askubuntu.com/questions/217570/bc-set-number-of-digits-after-decimal-point)
 2.  [Iterate over a list of files with spaces](https://stackoverflow.com/questions/7039130/iterate-over-a-list-of-files-with-spaces)
+
+
+
+```
+m4 patch sh gcc go groff-base linux-headers
+export GOPROXY="https://goproxy.io"
+```
+
+
+
+```
+## for mirai
+# python package
+pip install python-magic tornado lxml imagehash webdriver_manager
+# dependencies
+google-chrome chromedriver
+# git 
+pixiv-cralwer python-mirai 
+```
+
