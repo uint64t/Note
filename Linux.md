@@ -141,6 +141,15 @@ fdisk <device name>
 resize2fs <device name>
 ```
 
+### Backup the whole system
+
+```shell
+# Use tar
+sudo tar -czf /backup.tar.gz --exclude=/backup.tar.gz --exclude=/dev --exclude=/mnt --exclude=/proc --exclude=/sys --exclude=/tmp --exclude=/lost+found /
+```
+
+
+
 ## Shell Script
 
 ### Tricks
