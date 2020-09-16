@@ -26,7 +26,29 @@ possible to connect to vm directly from intranet machine, but cannot when forwar
 
 ?
 
+**Possible solution:**
+
 **Solution:**
+
+?
+
+## network 
+
+### cannot connect to internet after creating a network bridge
+
+**Error description**
+
+I create a series config to configure a network bridge, but after restarting systems-networkd, the connection to internet suddenly break, but I remember I have configured it to connect to internet correctly once.
+
+**Possilble cause**
+
+the route of network is broken after create this bridge
+
+**Possilble solution**
+
+delete specific route rules 
+
+**Solution**
 
 ?
 
