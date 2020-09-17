@@ -52,3 +52,15 @@ delete specific route rules
 
 ?
 
+## nvidia
+
+### cannot sign in to Nvidia experience
+
+**Error description**
+
+Sign in page stuck in the popup window
+
+**Solution**
+
+run as administrator 
+
