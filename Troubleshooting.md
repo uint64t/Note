@@ -60,7 +60,21 @@ delete specific route rules
 
 Sign in page stuck in the popup window
 
-**Solution**
+#### Solution
 
 run as administrator 
+
+## arch
+
+### can't boot into arch
+
+**Error description**
+
+can't auto boot into arch after install grub and init
+
+#### Solution
+
+install grub-bios (possible useful)
+
+do mkinitcpio befor grub-mkconfig, it must report it found vmlinuz-linux and initramfs-linux.img
 
