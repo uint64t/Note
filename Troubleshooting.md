@@ -78,3 +78,11 @@ install grub-bios (possible useful)
 
 do mkinitcpio befor grub-mkconfig, it must report it found vmlinuz-linux and initramfs-linux.img
 
+## Kicad
+
+### InteractiveHtmlBom does not show up on external plugin list, macOS Catalina, Kicad nightly
+
+#### **Solution**
+
+https://github.com/openscopeproject/InteractiveHtmlBom/issues/155
+
