@@ -10,7 +10,17 @@ defaults write com.apple.dock springboard-columns -int 8
 defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 ```
 
+## Make disk image
 
+```shell
+# list identifier of USB flash disk 
+diskutil list
+# erase disk
+diskutil eraseDisk MS-DOS "WINDOWS10" MBR <disk identifier>
+# open iso image
+# copy image to disk
+cp -rp /Volumes/VolumeName/* /Volumes/WINDOWS10/
+```
 
 ## Commands
 
