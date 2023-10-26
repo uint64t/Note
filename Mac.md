@@ -1,6 +1,6 @@
 ## MacSettings
 
-``` shell
+```shell
 ## Set Launchpad dispaly icon number
 # Set rows
 defaults write com.apple.dock springboard-rows -int 7
@@ -24,10 +24,10 @@ cp -rp /Volumes/VolumeName/* /Volumes/WINDOWS10/
 
 ## Commands
 
-``` shell
+```shell
 ## to check cpuinfo of mac
 # this command show the vendor, model and freq of cpu
-sysctl -n machdep.cpu.brand_string	
+sysctl -n machdep.cpu.brand_string    
 # this show the number of Processors of cpu
 system_profiler | grep processor
 
@@ -47,22 +47,18 @@ p.s: This section is used to record tips from blog etc. The function of these ti
 sudo xattr -d com.apple.quarantine </Path/To/App.app>
 ```
 
-
-
 ## Folders
 
-``` shell
+```shell
 # To show volume in dock
 # in Finder <Control+shift+G>, then input
-/Volume	
+/Volume    
 # then drag folder icon to dock
 ```
 
-
-
 ## Packages
 
-``` shell
+```shell
 # util-linux is located in 
 # /usr/local/opt/util-linux/
 # setsid is located in bin
@@ -78,4 +74,3 @@ brew cask install neteasemusic
 brew cask install qbittorrent
 brew cask install mpv
 ```
-

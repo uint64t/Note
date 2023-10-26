@@ -2,7 +2,7 @@
 
 ### Force keyword arguments
 
-``` python
+```python
 # In Python 3 you can use a bare "*" asterisk
 # in function parameter lists to force the
 # caller to use keyword arguments for certain
@@ -22,24 +22,20 @@ TypeError:
 'Hello'
 ```
 
-
-
 ## PyMethod
 
 **Note**: Reflection in python
 
-``` python
+```python
 # check all attribute of object
 dir([object])
 ```
-
-
 
 ## PyPackage
 
 ### tempfile
 
-``` python
+```python
 # tempfile can be used to generate a file in /tmp
 import tempfile
 temp_file = tempfile.NamedTemporaryFile()
@@ -48,7 +44,7 @@ temp_file.name
 
 ### io
 
-``` python
+```python
 # io can be used to generate a 'virtual' file in RAM
 # Actually, I used this module cooperated with threading module to dealing with low disk speed
 import io
@@ -57,4 +53,3 @@ with open(<output_file>, 'w') as f:
     data_size = f.write(ram_file.getbuffer())
 io_file.close()
 ```
-

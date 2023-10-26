@@ -2,7 +2,7 @@
 
 ## libvirt
 
-### cannot force off windows vm 
+### cannot force off windows vm
 
 **Error description: **
 
@@ -32,7 +32,7 @@ possible to connect to vm directly from intranet machine, but cannot when forwar
 
 ?
 
-## network 
+## network
 
 ### cannot connect to internet after creating a network bridge
 
@@ -85,4 +85,3 @@ do mkinitcpio befor grub-mkconfig, it must report it found vmlinuz-linux and ini
 #### **Solution**
 
 https://github.com/openscopeproject/InteractiveHtmlBom/issues/155
-
